@@ -1,5 +1,7 @@
+package jogador;
 
-import jogador.Pecas;
+import jogo.Casa;
+
 /**
  * Classe para a personagem do Lobo.
  * @author wolvery
@@ -8,15 +10,7 @@ import jogador.Pecas;
 
 public class Lobo extends Personagem {
 	//Estado do Lobo: Se ele esta comendo uma ovelha ou nao.
-	private enum Estado{
-		Livre(1),DigerindoOvelha(0);		
-		public int estadoLobo;
-		Estado(int valor){
-			estadoLobo = valor;
-		}
-		
-	}
-	private Estado estado;
+	private EstadoLobo estado;
 	
 	public Lobo(Casa casaGerada){
 		super("L", casaGerada);
@@ -24,7 +18,7 @@ public class Lobo extends Personagem {
 	}
 	
     public void comerOvelha(Casa casaAtual, Casa casaDaOvelha) {
-    	if (estado.equals (Estado.Livre)){
+    	if (estado.equals (EstadoLobo.Livre)){
     		
     	}
     	else{
