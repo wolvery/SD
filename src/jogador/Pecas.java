@@ -1,6 +1,6 @@
-package jogo;
+package jogador;
 
-import jogo.Casa;
+import jogador.Casa;
 
 
 public class Pecas {
