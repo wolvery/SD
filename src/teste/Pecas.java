@@ -1,6 +1,6 @@
 package teste;
 
-import teste.Casa;
+import jogador.Casa;
 
 //https://code.google.com/p/dethmal/source/browse/trunk/Damas/src/br/com/assinchronus/componentes/Tabuleiro.java?r=5
 

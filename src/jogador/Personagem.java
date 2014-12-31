@@ -1,6 +1,5 @@
 package jogador;
 
-import jogo.Casa;
 
 /**
  * Atributos comuns a personagens animaveis.
@@ -10,14 +9,7 @@ import jogo.Casa;
  */
 
 public abstract class Personagem {
-	private enum Espaco{
-		Lobo(3),Ovelha(2),Pastor(1),Vazio(1);
-		
-		public int valorEspaco;
-		Espaco(int valor){
-			valorEspaco = valor;
-		}
-	}
+
 	private Espaco nomeEspaco;
 	private Casa casaPersonagem;
 	
@@ -30,7 +22,7 @@ public abstract class Personagem {
 	 * @return the nomeEspaco
 	 */
 	public int getNomeEspaco() {
-		return nomeEspaco.valorEspaco;
+		return nomeEspaco.getValorEspaco();
 	}
 	/**
 	 * @param nomeEspaco the nomeEspaco to set
