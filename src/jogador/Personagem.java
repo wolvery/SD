@@ -1,3 +1,7 @@
+package jogador;
+
+import jogo.Casa;
+
 /**
  * Atributos comuns a personagens animaveis.
  * 
