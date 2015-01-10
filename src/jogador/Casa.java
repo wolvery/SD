@@ -1,12 +1,24 @@
 package jogador;
 
-import teste.Pecas;
+ 
 
 public class Casa {
 	/**
 	 * Posicao atual da casa.
 	 */
 	private int posicaoX, posicaoY;
+	
+	/**
+	 * Construtor da posicao da casa do Elemento.
+	 * 
+	 * @param posicaoX
+	 * @param posicaoY
+	 */
+	public Casa(int posicaoX, int posicaoY) {
+		super();
+		this.posicaoX = posicaoX;
+		this.posicaoY = posicaoY;
+	}
 
 	/**
 	 * @return the posicaoX

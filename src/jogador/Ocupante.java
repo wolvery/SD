@@ -1,4 +1,5 @@
 package jogador;
+
 /**
  * Valores para a ocupacao de alguma casa.
  * 
@@ -6,11 +7,11 @@ package jogador;
  *
  */
 
-public enum Espaco {
+public enum Ocupante {
 	Vazio(0),Pastor(1),Ovelha(2),Lobo(3),Cerca(4);
 	private int valorOcupado;
 	//Construtor
-	private Espaco(int valor) {
+	private Ocupante(int valor) {
 		valorOcupado = valor;
 	}
 	//Valor do enum de espaco ocupado.

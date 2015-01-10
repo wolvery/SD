@@ -1,8 +1,9 @@
 package jogador;
-
-
 /**
  * Classe responsavel pela personagem Ovelha.
+ * 
+ * Nessa classe estao todos os estados possiveis para a ovelha, as demais acoes
+ * ficam na classe dinamica.
  * 
  * @author wolvery
  * 
@@ -28,7 +29,7 @@ public class Ovelha extends Personagem {
 
 	private Vida situacaoVida;
 
-	public Ovelha(Espaco nomeEspaco, Casa casaPersonagem) {
+	public Ovelha(Ocupante nomeEspaco, Casa casaPersonagem) {
 		super(nomeEspaco, casaPersonagem);
 		// TODO Auto-generated constructor stub
 		estado = EstadoOvelha.Satisfeito;
@@ -60,7 +61,7 @@ public class Ovelha extends Personagem {
 	public void vidaAtualizaFome() {
 
 		if (estado == EstadoOvelha.Faminto) {
-			this.setNomeEspaco(Espaco.Vazio);
+			this.setNomeEspaco(Ocupante.Vazio);
 		} else {
 			if (estado == EstadoOvelha.PoucaFome) {
 				setNomeEstado(estado.Faminto);
@@ -70,25 +71,34 @@ public class Ovelha extends Personagem {
 		}
 
 	}
-	//Estado quando o pastor alimenta a ovelha ela tera seu estado alterado
+
+	// Estado quando o pastor alimenta a ovelha ela tera seu estado alterado
 	public void alimentarOvelha() {
 		if (estado == EstadoOvelha.Faminto) {
-			estado = EstadoOvelha.PoucaFome; 
+			estado = EstadoOvelha.PoucaFome;
 		} else {
 			if (estado == EstadoOvelha.PoucaFome) {
 				estado = EstadoOvelha.Satisfeito;
-			}			
+			}
 		}
 	}
 
 	// Estado da ovelha, quando ela e' atacada.
-	public void vidaOvelhaAtaque() {		
-		if (situacaoVida == Vida.Morto) {
-			 this.setNomeEspaco(Espaco.Vazio);
-		} else {
-			if (situacaoVida == Vida.Machucado) {
-				situacaoVida = Vida.Morto;
-			}			
+	/**
+	 * Duas chamadas mata a ovelha.
+	 */
+	public void vidaOvelhaAtaque() {
+		if (situacaoVida == Vida.Machucado) {
+			situacaoVida = Vida.Morto;
+		}
+	}
+
+	/**
+	 * Ovelha foi atacada.
+	 */
+	public void atacada() {
+		if (situacaoVida.equals(Vida.Vivo)) {
+			situacaoVida = Vida.Machucado;
 		}
 	}
 

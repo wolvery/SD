@@ -1,6 +1,7 @@
 package jogador;
 
 
+
 /**
  * Atributos comuns a personagens animaveis.
  * 
@@ -10,10 +11,10 @@ package jogador;
 
 public abstract class Personagem {
 
-	private Espaco nomeEspaco;
+	private Ocupante nomeEspaco;
 	private Casa casaPersonagem;
 	
-	public Personagem(Espaco nomeEspaco, Casa casaPersonagem) {
+	public Personagem(Ocupante nomeEspaco, Casa casaPersonagem) {
 		super();
 		this.nomeEspaco = nomeEspaco;
 		this.casaPersonagem = casaPersonagem;
@@ -21,13 +22,13 @@ public abstract class Personagem {
 	/**
 	 * @return the nomeEspaco
 	 */
-	public int getNomeEspaco() {
-		return nomeEspaco.getValorEspaco();
+	public Ocupante getNomeEspaco() {
+		return nomeEspaco;
 	}
 	/**
 	 * @param nomeEspaco the nomeEspaco to set
 	 */
-	public void setNomeEspaco(Espaco nomeEspaco) {
+	public void setNomeEspaco(Ocupante nomeEspaco) {
 		this.nomeEspaco = nomeEspaco;
 	}
 	/**

@@ -2,11 +2,13 @@ package jogador;
 
 public enum EstadoLobo {
 	
-		Livre(1),DigerindoOvelha(0);		
-		public int estadoLobo;
+		Livre(1),DigerindoOvelha(0),DestruindoCerca(2);		
+		private int estadoLobo;
 		EstadoLobo(int valor){
-			estadoLobo = valor;
+			this.estadoLobo = valor;
 		}
+		
+		
 		
 	
 }
